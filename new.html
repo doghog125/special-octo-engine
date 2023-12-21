@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+
+ <html>
+
+    <head>
+
+        <title> addition </title>
+
+        <style>
+
+            body {
+
+                font-family: monospace;
+
+            }
+
+            #result {
+
+                text-align: center;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <input id="number-input1" type="text" placeholder="enter 1st number"> </input>
+        <br> </br>
+        <input id="number-input2" type="text" placeholder="enter 2nd number"> </input>
+        <br> </br>
+        <button onclick="add()"> add! </button>
+        <br> </br>
+        <h1 id="result"> </h1>
+        <script>
+
+        let strInput1 = document.querySelector("#number-input1");
+        let strInput2 = document.querySelector("#number-input2");
+        intInput1 = 0;
+        intInput2 = 0;
+        let result = document.querySelector("#result");
+
+        function add() {
+
+           replacedStr1 = strInput1.value.replace(",", "")
+           replacedStr2 = strInput2.value.replace(",", "")
+
+           intInput1 = parseInt(replacedStr1);
+           intInput2 = parseInt(replacedStr2);
+
+           answer = intInput1 + intInput2;
+           result.innerHTML = answer;
+
+        }
+
+        </script>
+
+    </body>
+
+
+ </html>
