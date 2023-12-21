@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> page </title>
+
+        <style>
+
+            body {
+
+                font-family: monospace;
+                font-size: 20px;
+                color: rgb(17, 255, 0);
+                background-color: black;
+            }
+
+            .textbox {
+
+                color: rgb(17, 255, 0);
+                background-color: black;
+                border: none;
+                width: 1000px;
+                height: 1000px;
+                font-size: 20px;
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+
+                outline: none;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <p> content here <strong> <em> woohoo </em> </strong> </p>
+
+        <div class="nav"> <textarea id="textbox" class="textbox" type="text"> </textarea> </div>
+
+        <script>
+
+            document.addEventListener("keydown", function(event) {
+
+                let value = document.getElementById("textbox").value;
+                let inner = document.getElementById("textbox").innerHTML;
+
+                console.log("logged!");
+
+                console.log(value);
+
+                if (value === value && event.key === "Enter" ) {
+
+                    inner = "nah";
+
+
+                    }
+
+                },);
+
+        </script>
+
+    </body>

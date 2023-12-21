@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+
+ <html>
+
+    <head>
+
+        <title> name page </title>
+
+        <style>
+
+            body {
+
+                background-color: rgb(18, 232, 255)
+
+            }
+
+            .image {
+
+                visibility: hidden;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+    <h1 id="text"> what is your name? </h1>
+
+    <input type="text" id="input" placeholder="type name here"> </input>
+
+    <button id="button" onclick="takeName()"> submit </button>
+
+    <br> </br>
+
+    <p class="image"> here's a funny cat image </p>
+
+    <img id="image" class="image" src="https://www.boredpanda.com/blog/wp-content/uploads/2014/02/funny-wet-cats-coverimage.jpg"> </img>
+
+    <script>
+
+    let input = document.getElementById("input");
+    let text = document.getElementById("text");
+    let button = document.getElementById("button");
+    let image = document.querySelectorAll(".image");
+
+    function takeName() {
+
+        text.innerHTML = "Hi there, " + input.value + "!";
+        text.style.fontSize = "100px";
+
+
+        button.style.display = "none";
+        input.style.display = "none";
+
+        for (let i = 0; i < image.length; i++) {
+
+            image[i].style.visibility = "visible";
+
+            }
+
+    }
+
+
+    </script>
+
+    </body>
+
+ </html>

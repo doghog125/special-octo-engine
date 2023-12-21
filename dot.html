@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <style>
+
+
+
+        </style>
+
+    </head>
+
+
+    <body onmousemove="drawCircle(event)">
+
+        <canvas id="canvas" width="2000px" height="2000px"> </canvas>
+
+        <script>
+
+            let canvas = document.getElementById("canvas");
+            let context = canvas.getContext("2d");
+
+            setInterval(clearScreen, 16);
+
+            function drawCircle(e) {
+                context.beginPath();
+                context.arc(e.clientX, e.clientY, 50, 0, Math.PI * 2);
+                context.fillStyle = "red";
+                context.fill();
+            }
+
+            function clearScreen() {
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+
+            }
+
+        </script>
+
+    </body>
+
+
+</html>
